@@ -42,6 +42,42 @@ Below the front matter, write an optional Markdown description. This appears on 
 - Use the PR template checklist to verify everything is correct
 - A GitHub Action will automatically validate your front matter
 
+## Contributing with AI
+
+You can use ChatGPT, Claude, Cursor, or any AI assistant to draft your tool listing. Give it the right context and it can produce a valid listing in one go.
+
+**What to provide:**
+- The contents of `_tools/_template.md` (so it knows the structure)
+- The Categories, Use Cases, and Modalities tables/lists from this CONTRIBUTING.md (so it picks valid slugs)
+- The tool’s name and website (and any other info you have)
+
+**Ready-made prompt** — copy, fill in the bracketed parts, and paste:
+
+```
+I'm contributing an AI tool to the 8ai.ac directory (https://github.com/vocino/8ai.ac). 
+Create a complete tool listing file for me.
+
+CONTEXT — Use this template structure and taxonomy:
+
+[Paste the full contents of _tools/_template.md here]
+
+VALID VALUES (from CONTRIBUTING.md):
+- Categories: chat, image-generation, image-editing, video-generation, video-editing, audio-generation, audio-editing, speech, coding, writing, productivity, research, search, customer-service, design, marketing, education, data-analysis, 3d, agents, api-platform, prompt-tools
+- Use cases: content-creation, development, design, research, automation, support, sales, marketing, education, personal, data-analysis, video-production, audio-production, legal, healthcare, finance, enterprise
+- Modalities: text, image, video, audio, code
+- Pricing: free, freemium, paid, open-source
+
+TOOL TO ADD:
+- Name: [Tool name]
+- Website: [URL]
+- [Any other details: what it does, pricing model, has API, etc.]
+
+Output a complete .md file with valid YAML front matter and a 2–4 sentence Markdown description below. 
+The slug must be lowercase with hyphens only and match the filename (e.g. my-tool-name.md).
+```
+
+After you get the output, save it as `_tools/[slug].md`, run `node validate.js` to confirm it passes, and open a pull request.
+
 ## Categories
 
 Pick 1–3 that describe what the tool **does**:
