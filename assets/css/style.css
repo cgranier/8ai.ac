@@ -96,8 +96,39 @@ img {
   letter-spacing: -0.02em;
 }
 
-.site-nav__logo span {
-  color: var(--ctp-blue);
+.site-nav__logo .logo-num {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    var(--ctp-blue),
+    var(--ctp-teal),
+    var(--ctp-mauve),
+    var(--ctp-blue)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: logo-gradient 8s ease-in-out infinite;
+}
+
+@keyframes logo-gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.site-nav__logo .logo-tld {
+  font-weight: 300;
+  color: var(--ctp-overlay-0);
+  letter-spacing: 0.02em;
+}
+
+.site-nav__logo:hover {
+  color: var(--ctp-text);
+}
+
+.site-nav__logo:hover .logo-num {
+  animation-duration: 4s;
 }
 
 .site-nav__links {
