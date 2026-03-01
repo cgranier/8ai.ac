@@ -796,6 +796,16 @@ iconify-icon {
   line-height: 1.5;
 }
 
+.site-footer__credit {
+  margin-top: 0.75rem;
+  font-size: 0.6875rem;
+  color: var(--ctp-overlay-0);
+}
+
+.site-footer__credit a {
+  color: var(--ctp-overlay-1);
+}
+
 /* ========================================
    Responsive
    ======================================== */
