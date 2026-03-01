@@ -73,6 +73,21 @@ img {
   height: auto;
 }
 
+/* Iconify icon alignment - prevent baseline/vertical misalignment */
+iconify-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  vertical-align: -0.2em;
+}
+
+/* Reset vertical-align in flex contexts where it's unnecessary */
+.site-nav__links iconify-icon,
+.site-footer iconify-icon {
+  vertical-align: middle;
+}
+
 /* ========================================
    Nav Bar
    ======================================== */
@@ -139,10 +154,23 @@ img {
 }
 
 .site-nav__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
   color: var(--ctp-subtext-1);
   font-size: 0.875rem;
   font-weight: 500;
   transition: color 0.15s ease;
+}
+
+.site-nav__links .nav-icon {
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+.site-nav__links .btn-contribute__icon {
+  font-size: 1rem;
+  color: currentColor;
 }
 
 .site-nav__links a:hover {
@@ -206,7 +234,7 @@ img {
 .filter-section__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.5rem;
   width: 100%;
   padding: 0.5rem 0.375rem;
   background: none;
@@ -233,8 +261,15 @@ img {
   outline-offset: 2px;
 }
 
+.filter-section__icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
 .filter-section__chevron {
   font-size: 0.875rem;
+  margin-left: auto;
   transition: transform 0.2s ease;
   color: var(--ctp-overlay-1);
 }
@@ -324,9 +359,24 @@ img {
   font-variant-numeric: tabular-nums;
 }
 
+.search-box-wrap {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.search-box__icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: var(--ctp-overlay-1);
+  pointer-events: none;
+}
+
 .search-box {
   width: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
   background: var(--ctp-surface-0);
   border: 1px solid var(--ctp-surface-1);
   border-radius: var(--radius);
@@ -335,7 +385,6 @@ img {
   font-size: 0.8125rem;
   outline: none;
   transition: border-color 0.15s ease;
-  margin-bottom: 1.25rem;
 }
 
 .search-box::placeholder {
@@ -344,6 +393,11 @@ img {
 
 .search-box:focus {
   border-color: var(--ctp-blue);
+}
+
+.filter-toggle__icon {
+  font-size: 1.125rem;
+  opacity: 0.9;
 }
 
 .filter-toggle {
@@ -525,6 +579,11 @@ img {
   gap: 0.25rem;
 }
 
+.meta-badge__icon {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
 /* ========================================
    Tool Detail Page
    ======================================== */
@@ -683,9 +742,18 @@ img {
    Empty State
    ======================================== */
 .empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 4rem 2rem;
   color: var(--ctp-overlay-1);
+}
+
+.empty-state__icon {
+  font-size: 3rem;
+  opacity: 0.4;
+  margin-bottom: 1rem;
 }
 
 .empty-state__title {
@@ -707,7 +775,25 @@ img {
 }
 
 .site-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   color: var(--ctp-overlay-2);
+}
+
+.site-footer .footer-icon {
+  font-size: 0.875rem;
+  color: currentColor;
+  opacity: 0.9;
+}
+
+.site-footer p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem 0.5rem;
+  line-height: 1.5;
 }
 
 /* ========================================

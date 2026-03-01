@@ -8,7 +8,7 @@ description: "The open-source directory of AI tools, services, and platforms. Br
 
   <main class="main-content" role="main">
     <button class="filter-toggle" onclick="openSidebar()" aria-label="Open filters">
-      ☰ Filters
+      <iconify-icon icon="catppuccin:folder" class="filter-toggle__icon" aria-hidden="true"></iconify-icon>Filters
     </button>
 
     <div class="results-header">
@@ -29,6 +29,7 @@ description: "The open-source directory of AI tools, services, and platforms. Br
     </div>
 
     <div class="empty-state" id="emptyState" style="display:none">
+      <iconify-icon icon="catppuccin:search" class="empty-state__icon" aria-hidden="true"></iconify-icon>
       <p class="empty-state__title">No tools match your filters</p>
       <p>Try removing some filters or broadening your search.</p>
     </div>

@@ -1,9 +1,13 @@
 <div class="filter-overlay" id="filterOverlay" onclick="closeSidebar()"></div>
 <aside class="filter-sidebar" id="filterSidebar" role="complementary" aria-label="Filters">
-  <input type="text" class="search-box" id="searchBox" placeholder="Search tools…" aria-label="Search tools">
+  <div class="search-box-wrap">
+    <iconify-icon icon="catppuccin:search" class="search-box__icon" aria-hidden="true"></iconify-icon>
+    <input type="text" class="search-box" id="searchBox" placeholder="Search tools…" aria-label="Search tools">
+  </div>
 
   <div class="filter-section is-collapsed" data-filter="categories">
     <button type="button" class="filter-section__header" aria-expanded="false" aria-controls="filter-categories" id="filter-categories-toggle">
+      <iconify-icon icon="catppuccin:folder" class="filter-section__icon" aria-hidden="true"></iconify-icon>
       <span class="filter-section__title">Categories</span>
       <span class="filter-section__chevron" aria-hidden="true">›</span>
     </button>
@@ -22,6 +26,7 @@
 
   <div class="filter-section is-collapsed" data-filter="use_cases">
     <button type="button" class="filter-section__header" aria-expanded="false" aria-controls="filter-use_cases" id="filter-use_cases-toggle">
+      <iconify-icon icon="catppuccin:taskfile" class="filter-section__icon" aria-hidden="true"></iconify-icon>
       <span class="filter-section__title">Use Cases</span>
       <span class="filter-section__chevron" aria-hidden="true">›</span>
     </button>
@@ -40,6 +45,7 @@
 
   <div class="filter-section is-collapsed" data-filter="modalities">
     <button type="button" class="filter-section__header" aria-expanded="false" aria-controls="filter-modalities" id="filter-modalities-toggle">
+      <iconify-icon icon="catppuccin:image" class="filter-section__icon" aria-hidden="true"></iconify-icon>
       <span class="filter-section__title">Modalities</span>
       <span class="filter-section__chevron" aria-hidden="true">›</span>
     </button>
@@ -58,6 +64,7 @@
 
   <div class="filter-section is-collapsed" data-filter="pricing">
     <button type="button" class="filter-section__header" aria-expanded="false" aria-controls="filter-pricing" id="filter-pricing-toggle">
+      <iconify-icon icon="catppuccin:config" class="filter-section__icon" aria-hidden="true"></iconify-icon>
       <span class="filter-section__title">Pricing</span>
       <span class="filter-section__chevron" aria-hidden="true">›</span>
     </button>
@@ -77,6 +84,7 @@
 
   <div class="filter-section is-collapsed" data-filter="booleans">
     <button type="button" class="filter-section__header" aria-expanded="false" aria-controls="filter-features" id="filter-features-toggle">
+      <iconify-icon icon="catppuccin:folder-plugins" class="filter-section__icon" aria-hidden="true"></iconify-icon>
       <span class="filter-section__title">Features</span>
       <span class="filter-section__chevron" aria-hidden="true">›</span>
     </button>
