@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="category-page">
+  {% include breadcrumbs.html name=page.title %}
+
+  <h1 class="category-page__title">{{ page.title }}</h1>
+  <p class="category-page__description">{{ page.description }}</p>
+
+  <div class="tools-grid">
+    {% for tool in site.tools %}
+      {% if tool.categories contains page.category_slug %}
+        {% include tool-card.html tool=tool %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

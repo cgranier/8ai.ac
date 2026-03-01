@@ -1,0 +1,50 @@
+- slug: content-creation
+  label: Content Creation
+
+- slug: development
+  label: Development
+
+- slug: design
+  label: Design
+
+- slug: research
+  label: Research
+
+- slug: automation
+  label: Automation
+
+- slug: support
+  label: Customer Support
+
+- slug: sales
+  label: Sales & Outreach
+
+- slug: marketing
+  label: Marketing
+
+- slug: education
+  label: Education
+
+- slug: personal
+  label: Personal
+
+- slug: data-analysis
+  label: Data Analysis
+
+- slug: video-production
+  label: Video Production
+
+- slug: audio-production
+  label: Audio Production
+
+- slug: legal
+  label: Legal
+
+- slug: healthcare
+  label: Healthcare
+
+- slug: finance
+  label: Finance
+
+- slug: enterprise
+  label: Enterprise

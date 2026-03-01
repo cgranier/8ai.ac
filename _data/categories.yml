@@ -1,0 +1,87 @@
+- slug: chat
+  label: Chat & Conversational
+  description: AI chatbots and conversational assistants
+
+- slug: image-generation
+  label: Image Generation
+  description: Create images from prompts
+
+- slug: image-editing
+  label: Image Editing
+  description: Edit, upscale, inpaint, or enhance existing images
+
+- slug: video-generation
+  label: Video Generation
+  description: Create video from prompts or images
+
+- slug: video-editing
+  label: Video Editing
+  description: Edit, cut, caption, dub, or repurpose video
+
+- slug: audio-generation
+  label: Audio & Music Generation
+  description: Create music, sound effects, or synthetic voice
+
+- slug: audio-editing
+  label: Audio Editing
+  description: Transcription, editing, and podcast tools
+
+- slug: speech
+  label: Speech & Voice
+  description: Text-to-speech, speech-to-text, voice cloning, and voice agents
+
+- slug: coding
+  label: Coding & Development
+  description: Code completion, generation, review, and debugging
+
+- slug: writing
+  label: Writing
+  description: Copy, blogs, emails, and creative writing
+
+- slug: productivity
+  label: Productivity
+  description: Note-taking, summarization, and task management
+
+- slug: research
+  label: Research & Analysis
+  description: Literature search, data extraction, and synthesis
+
+- slug: search
+  label: Search & Discovery
+  description: AI search engines and semantic search
+
+- slug: customer-service
+  label: Customer Service
+  description: Support bots, ticket routing, and knowledge bases
+
+- slug: design
+  label: Design
+  description: UI, branding, mockups, and layout
+
+- slug: marketing
+  label: Marketing & Sales
+  description: Ad copy, SEO, outreach, and analytics
+
+- slug: education
+  label: Education
+  description: Tutoring, learning platforms, and course creation
+
+- slug: data-analysis
+  label: Data & Analytics
+  description: Spreadsheets, BI, and data wrangling
+
+- slug: 3d
+  label: 3D & Spatial
+  description: 3D models, assets, and environments
+
+- slug: agents
+  label: Agents & Automation
+  description: Multi-step agents, workflows, and automation
+
+- slug: api-platform
+  label: APIs & Platforms
+  description: Model APIs, embeddings, and inference platforms
+
+- slug: prompt-tools
+  label: Prompt Engineering
+  description: Prompt managers, testing, and optimization

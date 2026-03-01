@@ -1,0 +1,36 @@
+---
+layout: default
+title: "8ai.ac — AI Tools Directory"
+description: "The open-source directory of AI tools, services, and platforms. Browse, filter, and discover free and paid AI tools across every category."
+---
+<div class="page-layout">
+  {% include sidebar.html %}
+
+  <main class="main-content" role="main">
+    <button class="filter-toggle" onclick="openSidebar()" aria-label="Open filters">
+      ☰ Filters
+    </button>
+
+    <div class="results-header">
+      <span class="results-count" id="resultsCount">
+        Showing <strong>{{ site.tools | size }}</strong> of <strong>{{ site.tools | size }}</strong> tools
+      </span>
+      <select class="sort-select" id="sortSelect" aria-label="Sort tools">
+        <option value="name-asc">Name A–Z</option>
+        <option value="name-desc">Name Z–A</option>
+        <option value="newest">Newest first</option>
+      </select>
+    </div>
+
+    <div class="tools-grid" id="toolsGrid">
+      {% for tool in site.tools %}
+        {% include tool-card.html tool=tool %}
+      {% endfor %}
+    </div>
+
+    <div class="empty-state" id="emptyState" style="display:none">
+      <p class="empty-state__title">No tools match your filters</p>
+      <p>Try removing some filters or broadening your search.</p>
+    </div>
+  </main>
+</div>

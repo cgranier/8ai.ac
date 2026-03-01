@@ -1,0 +1,14 @@
+- slug: text
+  label: Text
+
+- slug: image
+  label: Image
+
+- slug: video
+  label: Video
+
+- slug: audio
+  label: Audio
+
+- slug: code
+  label: Code

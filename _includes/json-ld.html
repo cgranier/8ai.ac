@@ -1,0 +1,19 @@
+{% assign tool = include.tool %}
+{% assign price = "0" %}
+{% if tool.pricing == "paid" %}{% assign price = "" %}{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": {{ tool.name | jsonify }},
+  "description": {{ tool.description | jsonify }},
+  "url": {{ tool.website | jsonify }},
+  "applicationCategory": "WebApplication",
+  "operatingSystem": "Web"{% if price != "" %},
+  "offers": {
+    "@type": "Offer",
+    "price": "{{ price }}",
+    "priceCurrency": "USD"
+  }{% endif %}
+}
+</script>

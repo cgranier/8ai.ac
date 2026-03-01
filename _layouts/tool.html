@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% include json-ld.html tool=page %}
+
+<article class="tool-detail">
+  {% include breadcrumbs.html name=page.name categories=page.categories %}
+
+  <header class="tool-detail__header">
+    <h1 class="tool-detail__name">{{ page.name }}</h1>
+    <p class="tool-detail__description">{{ page.description }}</p>
+
+    <div class="tool-detail__meta">
+      <span class="tool-card__pricing pricing-{{ page.pricing }}">{{ page.pricing }}</span>
+      {% if page.api %}<span class="tag">API</span>{% endif %}
+      {% if page.self_hosted %}<span class="tag">Self-hosted</span>{% endif %}
+      {% if page.verified %}<span class="tag" style="background:var(--ctp-green);color:var(--ctp-crust)">Verified</span>{% endif %}
+    </div>
+
+    <a href="{{ page.website }}" class="tool-detail__visit" target="_blank" rel="noopener noreferrer">
+      Visit {{ page.name }} →
+    </a>
+  </header>
+
+  {% if page.features and page.features.size > 0 %}
+  <section class="tool-detail__features">
+    <h2>Features</h2>
+    <ul>
+      {% for feature in page.features %}
+      <li>{{ feature }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if content and content != "" %}
+  <section class="tool-detail__body">
+    {{ content }}
+  </section>
+  {% endif %}
+
+  {% if page.categories %}
+  <section class="tool-detail__similar">
+    <h2>Similar tools</h2>
+    <div class="tools-grid">
+      {% assign first_cat = page.categories | first %}
+      {% assign count = 0 %}
+      {% for tool in site.tools %}
+        {% if tool.slug != page.slug and tool.categories contains first_cat and count < 3 %}
+          {% include tool-card.html tool=tool %}
+          {% assign count = count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>

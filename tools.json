@@ -1,0 +1,22 @@
+---
+layout: null
+---
+[
+  {% for tool in site.tools %}
+  {
+    "name": {{ tool.name | jsonify }},
+    "slug": {{ tool.slug | jsonify }},
+    "url": "{{ tool.url | relative_url }}",
+    "website": {{ tool.website | default: "" | jsonify }},
+    "description": {{ tool.description | jsonify }},
+    "categories": {{ tool.categories | jsonify }},
+    "use_cases": {{ tool.use_cases | default: empty | jsonify }},
+    "modalities": {{ tool.modalities | default: empty | jsonify }},
+    "pricing": {{ tool.pricing | jsonify }},
+    "api": {{ tool.api | default: false | jsonify }},
+    "self_hosted": {{ tool.self_hosted | default: false | jsonify }},
+    "features": {{ tool.features | default: empty | jsonify }},
+    "launch_date": {{ tool.launch_date | default: "" | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

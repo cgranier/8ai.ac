@@ -1,0 +1,35 @@
+title: "8ai.ac — AI Tools Directory"
+description: "The open-source directory of AI tools, services, and platforms. Free and paid. Community-driven."
+url: "https://8ai.ac"
+baseurl: ""
+
+collections:
+  tools:
+    output: true
+    permalink: /tools/:slug/
+    sort_by: name
+
+defaults:
+  - scope:
+      path: ""
+      type: "tools"
+    values:
+      layout: "tool"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - CONTRIBUTING.md
+  - .github
+  - validate.js
+  - package.json
+  - package-lock.json
+
+sass:
+  style: compressed
