@@ -83,8 +83,7 @@ iconify-icon {
 }
 
 /* Reset vertical-align in flex contexts where it's unnecessary */
-.site-nav__links iconify-icon,
-.site-footer iconify-icon {
+.site-nav__links iconify-icon {
   vertical-align: middle;
 }
 
@@ -212,19 +211,60 @@ iconify-icon {
   width: var(--sidebar-width);
   min-width: var(--sidebar-width);
   height: calc(100vh - var(--nav-height));
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
   padding: 1.25rem 1rem;
   background: var(--ctp-mantle);
   border-right: 1px solid var(--ctp-surface-0);
 }
 
-.filter-sidebar::-webkit-scrollbar {
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.sidebar-content::-webkit-scrollbar {
   width: 4px;
 }
 
-.filter-sidebar::-webkit-scrollbar-thumb {
+.sidebar-content::-webkit-scrollbar-thumb {
   background: var(--ctp-surface-1);
   border-radius: 4px;
+}
+
+.sidebar-footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ctp-surface-0);
+  font-size: 0.6875rem;
+  color: var(--ctp-overlay-0);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+
+.sidebar-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--ctp-overlay-2);
+}
+
+.sidebar-footer__icon {
+  font-size: 0.8125rem;
+  color: currentColor;
+  opacity: 0.9;
+}
+
+.sidebar-footer__credit {
+  color: var(--ctp-overlay-0);
+}
+
+.sidebar-footer__credit a {
+  color: var(--ctp-overlay-1);
 }
 
 .filter-section {
@@ -761,49 +801,6 @@ iconify-icon {
   font-weight: 700;
   color: var(--ctp-subtext-0);
   margin-bottom: 0.5rem;
-}
-
-/* ========================================
-   Footer
-   ======================================== */
-.site-footer {
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--ctp-overlay-0);
-  border-top: 1px solid var(--ctp-surface-0);
-}
-
-.site-footer a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  color: var(--ctp-overlay-2);
-}
-
-.site-footer .footer-icon {
-  font-size: 0.875rem;
-  color: currentColor;
-  opacity: 0.9;
-}
-
-.site-footer p {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem 0.5rem;
-  line-height: 1.5;
-}
-
-.site-footer__credit {
-  margin-top: 0.75rem;
-  font-size: 0.6875rem;
-  color: var(--ctp-overlay-0);
-}
-
-.site-footer__credit a {
-  color: var(--ctp-overlay-1);
 }
 
 /* ========================================
