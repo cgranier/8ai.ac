@@ -3,6 +3,19 @@ description: "The open-source directory of AI tools, services, and platforms. Fr
 url: "https://8ai.ac"
 baseurl: ""
 
+author:
+  name: "Vocino"
+  url: "https://vocino.com"
+
+twitter:
+  username: vocino
+
+social:
+  name: "Vocino"
+  links:
+    - https://threads.com/vocino
+    - https://x.com/vocino
+
 collections:
   tools:
     output: true
