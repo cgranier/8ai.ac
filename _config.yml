@@ -9,6 +9,7 @@ author:
 
 twitter:
   username: vocino
+  card: summary_large_image
 
 social:
   name: "Vocino"
@@ -28,6 +29,11 @@ defaults:
       type: "tools"
     values:
       layout: "tool"
+  # Default OG/social image for all pages (used when sharing links)
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-image.png
 
 plugins:
   - jekyll-seo-tag
