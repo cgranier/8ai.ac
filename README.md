@@ -69,10 +69,10 @@ MIT License. See [LICENSE](LICENSE) for details. Listings are contributed by the
 
 [contributors-shield]: https://img.shields.io/github/contributors/vocino/8ai.ac?style=flat-square&color=89b4fa&labelColor=45475a
 [contributors-url]: https://github.com/vocino/8ai.ac/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/vocino/8ai.ac?style=flat-square&color=89b4fa&labelColor=45475a
+[forks-shield]: https://img.shields.io/github/forks/vocino/8ai.ac?style=flat-square&color=94e2d5&labelColor=45475a
 [forks-url]: https://github.com/vocino/8ai.ac/network/members
-[stars-shield]: https://img.shields.io/github/stars/vocino/8ai.ac?style=flat-square&color=89b4fa&labelColor=45475a
+[stars-shield]: https://img.shields.io/github/stars/vocino/8ai.ac?style=flat-square&color=f9e2af&labelColor=45475a
 [stars-url]: https://github.com/vocino/8ai.ac/stargazers
-[issues-shield]: https://img.shields.io/github/issues/vocino/8ai.ac?style=flat-square&color=89b4fa&labelColor=45475a
+[issues-shield]: https://img.shields.io/github/issues/vocino/8ai.ac?style=flat-square&color=f38ba8&labelColor=45475a
 [issues-url]: https://github.com/vocino/8ai.ac/issues
-[license-shield]: https://img.shields.io/github/license/vocino/8ai.ac?style=flat-square&color=89b4fa&labelColor=45475a
+[license-shield]: https://img.shields.io/github/license/vocino/8ai.ac?style=flat-square&color=a6e3a1&labelColor=45475a

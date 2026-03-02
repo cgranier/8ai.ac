@@ -26,7 +26,8 @@ jobs:
         uses: jaywcjlove/github-action-modify-file-content@main
         with:
           path: README.md
-          body: ${{ steps.contributors.outputs.htmlList }}
+          body: |
+            <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">${{ steps.contributors.outputs.htmlList }}</div>
           openDelimiter: "<!-- readme: contributors -start -->"
           closeDelimiter: "<!-- readme: contributors -end -->"
           message: "docs(contributor): update contributors in README"
