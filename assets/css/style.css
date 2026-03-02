@@ -711,11 +711,19 @@ iconify-icon {
   margin-bottom: 2rem;
 }
 
+.tool-detail__title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
 .tool-detail__name {
   font-size: 2rem;
   font-weight: 800;
   color: var(--ctp-text);
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
 
 .tool-detail__description {
@@ -730,7 +738,6 @@ iconify-icon {
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 .tool-detail__visit {
@@ -755,6 +762,11 @@ iconify-icon {
 .tool-detail__body {
   color: var(--ctp-subtext-1);
   line-height: 1.7;
+  margin-top: 2.5rem;
+}
+
+.tool-detail__body > p:first-child {
+  margin-top: 0;
 }
 
 .tool-detail__body h2 {
