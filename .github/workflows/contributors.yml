@@ -10,11 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v4
 
-      - name: Update contributors in README
-        uses: akhilmhdh/contributors-readme-action@v2.3.11
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: mkdir -p build
+
+      - name: Generate contributors (avatars only)
+        id: contributors
+        uses: jaywcjlove/github-action-contributors@main
+        with:
+          output: build/CONTRIBUTORS.svg
+          filter-author: "^(claude)$"
+          avatarSize: "42"
+
+      - name: Update README with contributors
+        uses: jaywcjlove/github-action-modify-file-content@main
+        with:
+          path: README.md
+          body: ${{ steps.contributors.outputs.htmlList }}
+          openDelimiter: "<!-- readme: contributors -start -->"
+          closeDelimiter: "<!-- readme: contributors -end -->"
+          message: "docs(contributor): update contributors in README"
