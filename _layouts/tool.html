@@ -19,9 +19,16 @@ layout: default
 
     <p class="tool-detail__description">{{ page.description }}</p>
 
-    <a href="{{ page.website }}" class="tool-detail__visit" target="_blank" rel="noopener noreferrer">
-      Visit {{ page.name }} →
-    </a>
+    <div class="tool-detail__actions">
+      <a href="{{ page.website }}" class="tool-detail__visit" target="_blank" rel="noopener noreferrer">
+        Visit {{ page.name }} →
+      </a>
+      <p class="tool-detail__edit">
+        <a href="https://github.com/vocino/8ai.ac/edit/main/_tools/{{ page.slug }}.md" target="_blank" rel="noopener noreferrer">
+          See something wrong? Edit this page on GitHub
+        </a>
+      </p>
+    </div>
   </header>
 
   {% if page.features and page.features.size > 0 %}

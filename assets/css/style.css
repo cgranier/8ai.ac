@@ -759,6 +759,29 @@ iconify-icon {
   color: var(--ctp-crust);
 }
 
+.tool-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.tool-detail__edit {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.tool-detail__edit a {
+  color: var(--ctp-overlay-1);
+  text-decoration: none;
+}
+
+.tool-detail__edit a:hover {
+  color: var(--ctp-blue);
+  text-decoration: underline;
+}
+
 .tool-detail__body {
   color: var(--ctp-subtext-1);
   line-height: 1.7;
