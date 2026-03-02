@@ -240,6 +240,11 @@ iconify-icon {
   color: var(--ctp-text);
 }
 
+@keyframes contribute-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(137, 180, 250, 0.2); }
+  50% { box-shadow: 0 0 16px rgba(137, 180, 250, 0.35); }
+}
+
 .site-nav__links .btn-contribute {
   display: inline-flex;
   align-items: center;
@@ -251,12 +256,15 @@ iconify-icon {
   font-weight: 600;
   font-size: 0.875rem;
   transition: filter 0.2s ease, transform 0.15s ease;
+  animation: contribute-glow 3s ease-in-out infinite;
 }
 
 .site-nav__links .btn-contribute:hover {
   filter: brightness(1.1);
   transform: translateY(-1px);
   color: var(--ctp-crust);
+  animation: none;
+  box-shadow: 0 0 20px rgba(137, 180, 250, 0.4);
 }
 
 /* ========================================
