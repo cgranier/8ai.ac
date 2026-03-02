@@ -1,5 +1,6 @@
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <a href="{{ '/' | relative_url }}" class="site-nav__logo"><span class="logo-num">8</span>ai<span class="logo-tld">.ac</span></a>
+  {% if page.url == '/' %}<h1 class="site-nav__tagline">Soothing pastels for <span class="site-nav__tagline-accent">AI innovation</span>. The open-source directory of AI tools. Browse, filter, and discover what's next.</h1>{% endif %}
   <ul class="site-nav__links">
     <li><a href="https://github.com/vocino/8ai.ac" target="_blank" rel="noopener noreferrer"><iconify-icon icon="catppuccin:git" class="nav-icon" aria-hidden="true"></iconify-icon><span class="nav-text">GitHub</span></a></li>
     <li><a href="https://github.com/vocino/8ai.ac?tab=contributing-ov-file" class="btn-contribute" target="_blank" rel="noopener noreferrer"><iconify-icon icon="tabler:plus" class="btn-contribute__icon" aria-hidden="true"></iconify-icon>Add Your Tool</a></li>
