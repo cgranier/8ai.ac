@@ -48,6 +48,11 @@ tools.json       → Generated API endpoint
 validate.js      → Front matter validation script
 ```
 
+## Contributors
+
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
+
 ## Acknowledgements
 
 - [Catppuccin](https://github.com/catppuccin/catppuccin) — Color palette and theme inspiration
